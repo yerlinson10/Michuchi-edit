@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.sand.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="container">
+    <header>
+        <hgroup>
+            <h2>Michuchi-edit</h2>
+            <p>Crea memes con las fotos de michuchi</p>
+        </hgroup>
+    </header>
+    <main>
+        <div class="grid">
+            <div class="container">
+                <label for="topText">Texto Superior:</label>
+                <textarea id="topText" name="bio" placeholder="texto de la parte superior..." aria-label="Texto superior"></textarea>
+
+                <label for="bottomText">Texto Inferior:</label>
+                <textarea id="bottomText" name="bio" placeholder="texto de la parte inferior..." aria-label="Texto inferior"></textarea>
+
+                <fieldset class="grid">
+                    <label for="topTextColor">Color Texto Superior:</label>
+                    <input type="color" id="topTextColor" value="#ffffff">
+
+                    <label for="bottomTextColor">Color Texto Inferior:</label>
+                    <input type="color" id="bottomTextColor" value="#ffffff">
+                </fieldset>
+                
+                <fieldset class="grid">
+                    <label for="topTextSize">Tamaño Texto Superior:</label>
+                    <input type="range" id="topTextSize" min="10" max="100" value="30">
+
+                    <label for="bottomTextSize">Tamaño Texto Inferior:</label>
+                    <input type="range" id="bottomTextSize" min="10" max="100" value="30">
+                </fieldset>
+                
+                <fieldset class="grid">
+                    <label for="imageWidth">Ancho de la Imagen:</label>
+                    <input type="text" id="imageWidth" value="500">
+
+                    <label for="imageHeight">Altura de la Imagen:</label>
+                    <input type="text" id="imageHeight" value="500">
+                </fieldset>
+                
+            </div>
+            <div>
+                <div class="container">
+                    <button data-target="modal-example" onclick="toggleModal(event)">
+                        Cambiar imagen
+                    </button>
+                </div>
+                <br>
+                <div class="container">
+                    <canvas id="hiddenCanvas" style="display: none;"></canvas>
+                    <canvas id="visibleCanvas"></canvas>
+                </div>
+                <br>
+                <button class="outline">Descargar</button>
+                
+            </div>
+            
+        </div>
+
+        <!-- Modal -->
+        <dialog id="modal-example">
+            <article>
+                <header>
+                    <button aria-label="Close" rel="prev" data-target="modal-example" onclick="toggleModal(event)" ></button>
+                    <h3>Cambiar la imagen</h3>
+                </header>
+                    <p>
+                        <strong>Selecione una imagen</strong>
+                    </p>
+                    </header>
+                    
+                    <ul id="listaOpciones">
+                    </ul>
+                    <footer>
+                        <button role="button" class="secondary" data-target="modal-example" onclick="toggleModal(event)" >
+                            Cerrar
+                        </button>
+                    </footer>
+            </article>
+        </dialog>
+    </main>
+    <footer>
+            <p style="font-size: 0.8rem;">Copyright © <span class="dynamic-year">2024</span> Yerlinson Lora, Todos los derechos reservados.</p>
+    </footer>
+    <script>
+    
+    </script>
+    <script src="js/modal.js"></script>
+    <script src="js/canvas_modifier.js"></script>
+    <script src="js/image_change.js"></script>
+    <script src="js/list_img.js"></script>
+    <script src="js/img_download.js"></script>
+</body>
+</html>

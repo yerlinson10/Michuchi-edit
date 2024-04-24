@@ -1,0 +1,49 @@
+label {
+    font-size: 0.9rem;
+}
+
+
+#listaOpciones {
+    /* Remove default bullet points */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Make the list container a flexbox */
+    flex-wrap: wrap; /* Allow list items to wrap to multiple lines */
+    justify-content: center; /* Center the list items horizontally */
+    width: 75%; /* Adjust width as needed */
+    margin: 20px auto; /* Add space around the list */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  
+  #listaOpciones li {
+    display: flex;
+    align-items: center;
+    margin: 15px; /* Adjust spacing between list items */
+    padding: 20px;
+    border-radius: 10px; /* More rounded corners for a softer look */
+    background-color: #202632; /* White background */
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to each list item */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+  }
+  
+  #listaOpciones li:hover {
+    transform: scale(1.1); /* Slightly enlarge the hovered item */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  }
+  
+  #listaOpciones li img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+    margin-right: 15px;
+    border-radius: 50%; /* Create circular image */
+  }
+  
+  #listaOpciones li span {
+    font-family: 'Arial', sans-serif; /* Choose a nice font */
+    font-size: 18px; /* Adjust font size as needed */
+    font-weight: bold;
+    color: #fff; /* Darker text color for better contrast */
+  }
+  
